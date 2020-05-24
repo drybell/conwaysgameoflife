@@ -21,6 +21,10 @@ import numpy as np
 from time import sleep
 from copy import deepcopy
 
+#text-based is complete, transition to using pygame
+# import pygame
+# from pygame.locals import *
+
 np.set_printoptions(threshold=np.inf)
 
 class Board:
@@ -97,41 +101,55 @@ def transition(x):
 				y.board[row, column] = 0
 	return y 
 
-def main():
+# def main():
 
-	# use this to modify initial height and width of board
-	width = 17
-	height = 17
+# 	# use this to modify initial height and width of board
+# 	width = 500
+# 	height = 500
 
-	x = Board(width, height)
+# 	x = Board(width, height)
 
-	#list of coordinates that will be flipped to 1 
+# 	#list of coordinates that will be flipped to 1 
 
-	#simple glider -- uncomment line below 
-	# initial_conditions = ((5,5) , (6,6) , (6,7) , (5, 7) , (4 , 7))
+# 	#simple glider -- uncomment line below 
+# 	# initial_conditions = ((5,5) , (6,6) , (6,7) , (5, 7) , (4 , 7))
 
-	#simple toad -- uncomment line below 
-	# initial_conditions = ((3,3) , (3,4) , (3,5), (2, 4) , (2, 5) , (2, 6))
+# 	#simple toad -- uncomment line below 
+# 	# initial_conditions = ((3,3) , (3,4) , (3,5), (2, 4) , (2, 5) , (2, 6))
 
-	#penta-decathlon -- uncomment line below 
-	initial_conditions = ((3,3),(3,4),(3,5),(4,4),(5,4),(6,3),(6,4),(6,5),(8,3),(8,4),(8,5),(9,3),(9,4),(9,5),(11,3),(11,4),(11,5),(12,4),(13,4),(14,3),(14,4),(14,5))
+# 	#penta-decathlon -- uncomment line below 
+# 	# initial_conditions = ((3,3),(3,4),(3,5),(4,4),(5,4),(6,3),(6,4),(6,5),(8,3),(8,4),(8,5),(9,3),(9,4),(9,5),(11,3),(11,4),(11,5),(12,4),(13,4),(14,3),(14,4),(14,5))
 
-	#pulsar oscillator
+# 	#pulsar oscillator
+
+# 	#R-pentomino
+# 	initial_conditions = ((3,3),(3,4),(2,4),(2,5),(4,4))
 
 
-	setInitialBoard(x, initial_conditions)
-	print(x.board)
+# 	setInitialBoard(x, initial_conditions)
+# 	print(x.board)
 
-	# set the number of ticks and refresh rate
-	max_ticks = 1000
-	sleep_time = .1
+# 	# set the number of ticks and refresh rate
+# 	max_ticks = 1000
+# 	sleep_time = .1
 
-	for i in range(0, max_ticks):
-		y = transition(x)
-		print(y.board)
-		x = y
 
-		sleep(sleep_time)
+# 	# #pygame messing
+# 	# pygame.init()
+# 	# screen_width = 500
+# 	# screen_height = 500
+# 	# screen=pygame.display.set_mode([screen_width,screen_height])
+# 	# screen.fill((1,1,1))
+# 	# pygame.draw.rect(screen, (230, 40, 50), Rect((10,10),(20,20)))
+# 	# pygame.display.update()
 
-if __name__ == '__main__':
-	main()
+
+# 	for i in range(0, max_ticks):
+# 		y = transition(x)
+# 		print(y.board)
+# 		x = y
+
+# 		sleep(sleep_time)
+
+# if __name__ == '__main__':
+# 	main()
